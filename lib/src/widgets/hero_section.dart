@@ -27,7 +27,6 @@ class HeroSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Left Column: Text & Actions
           Expanded(
             flex: isMobile ? 0 : 3,
             child: Column(
@@ -168,7 +167,7 @@ class HeroSection extends StatelessWidget {
                   ),
                 ],
                 image: const DecorationImage(
-                  image: NetworkImage('https://via.placeholder.com/350'),
+                  image: AssetImage('assets/images/person.png'),
                   fit: BoxFit.cover,
                 ),
                 border: Border.all(color: theme.colorScheme.surface, width: 8),

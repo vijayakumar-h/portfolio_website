@@ -26,62 +26,49 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Theme.of(context).scaffoldBackgroundColor,
-        child: CustomScrollView(
-          controller: scrollController,
-          slivers: [
-            // Navigation Bar
-            SliverToBoxAdapter(
-
-              child: PortfolioNavigationBar(
-                onAboutTap: () => _scrollToSection(aboutKey),
-                onSkillsTap: () => _scrollToSection(skillsKey),
-                onExperienceTap: () => _scrollToSection(experienceKey),
-                onProjectsTap: () => _scrollToSection(projectsKey),
-                onContactTap: () => _scrollToSection(contactKey),
-                themeProvider: widget.themeProvider,
-              ),
-            ),
-            // Hero Section
-            const SliverToBoxAdapter(child: HeroSection()),
-            // About Section
-            SliverToBoxAdapter(
-              child: Container(key: aboutKey, child: const AboutSection()),
-            ),
-            // Experience Section
-            SliverToBoxAdapter(
-              child: Container(
-                key: experienceKey,
-                child: const ExperienceSection(),
-              ),
-            ),
-            // Projects Section
-            SliverToBoxAdapter(
-              child: Container(
-                key: projectsKey,
-                child: const ProjectsSection(),
-              ),
-            ),
-            // Skills Section
-            SliverToBoxAdapter(
-              child: Container(key: skillsKey, child: const SkillsSection()),
-            ),
-            // Contact Section
-            SliverToBoxAdapter(
-              child: Container(key: contactKey, child: const ContactSection()),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  @override
   void dispose() {
     scrollController.dispose();
     super.dispose();
   }
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    body: Container(
+      color: Theme.of(context).scaffoldBackgroundColor,
+      child: CustomScrollView(
+        controller: scrollController,
+        slivers: [
+          SliverToBoxAdapter(
+            child: PortfolioNavigationBar(
+              onAboutTap: () => _scrollToSection(aboutKey),
+              onSkillsTap: () => _scrollToSection(skillsKey),
+              onExperienceTap: () => _scrollToSection(experienceKey),
+              onProjectsTap: () => _scrollToSection(projectsKey),
+              onContactTap: () => _scrollToSection(contactKey),
+              themeProvider: widget.themeProvider,
+            ),
+          ),
+          const SliverToBoxAdapter(child: HeroSection()),
+          SliverToBoxAdapter(
+            child: Container(key: aboutKey, child: const AboutSection()),
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              key: experienceKey,
+              child: const ExperienceSection(),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Container(key: projectsKey, child: const ProjectsSection()),
+          ),
+          SliverToBoxAdapter(
+            child: Container(key: skillsKey, child: const SkillsSection()),
+          ),
+          SliverToBoxAdapter(
+            child: Container(key: contactKey, child: const ContactSection()),
+          ),
+        ],
+      ),
+    ),
+  );
 }
