@@ -42,6 +42,13 @@ class AboutSection extends StatelessWidget {
             direction: isMobile ? Axis.vertical : Axis.horizontal,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Expanded(
+                flex: isMobile ? 0 : 2,
+                child: SizedBox(
+                  height: 300,
+                  width: double.infinity,
+                ),
+              ),
               // Text Content
               Expanded(
                 flex: isMobile ? 0 : 3,
@@ -92,30 +99,6 @@ class AboutSection extends StatelessWidget {
 
               if (!isMobile) const SizedBox(width: 60),
               if (isMobile) const SizedBox(height: 48),
-
-              // Image Placeholder (Optional for About)
-              Expanded(
-                flex: isMobile ? 0 : 2,
-                child: Container(
-                  height: 300,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: theme.primaryColor.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: theme.primaryColor.withValues(alpha: 0.2),
-                      width: 2,
-                    ),
-                  ),
-                  child: Center(
-                    child: Icon(
-                      Icons.person_outline,
-                      size: 64,
-                      color: theme.primaryColor.withValues(alpha: 0.5),
-                    ),
-                  ),
-                ),
-              ),
             ],
           ),
         ],
