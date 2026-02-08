@@ -7,6 +7,11 @@ class AboutSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
     final theme = Theme.of(context);
+    final TextStyle style = GoogleFonts.poppins(
+      fontSize: 18,
+      color: theme.colorScheme.onSurfaceVariant,
+      height: 1.8,
+    );
 
     return Container(
       padding: EdgeInsets.symmetric(
@@ -18,7 +23,6 @@ class AboutSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Section Title
           Text(
             'About Me',
             style: GoogleFonts.poppins(
@@ -36,60 +40,28 @@ class AboutSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(2),
             ),
           ),
-
-          // Content
           Flex(
-            direction: isMobile ? Axis.vertical : Axis.horizontal,
             crossAxisAlignment: CrossAxisAlignment.start,
+            direction: isMobile ? Axis.vertical : Axis.horizontal,
             children: [
-              Expanded(
-                flex: isMobile ? 0 : 2,
-                child: SizedBox(
-                  height: 300,
-                  width: double.infinity,
-                ),
-              ),
-              // Text Content
               Expanded(
                 flex: isMobile ? 0 : 3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Flutter Developer with 3+ years of experience building and deploying high-performance cross-platform mobile applications.',
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        color: theme.colorScheme.onSurfaceVariant,
-                        height: 1.8,
-                      ),
+                      "I'm a passionate Flutter Developer with 3+ years of experience building and deploying high-performance cross-platform mobile applications. My expertise lies in translating business requirements and Figma designs into scalable mobile solutions.",
+                      style: style,
                     ),
                     const SizedBox(height: 24),
                     Text(
-                      'Strong in Flutter, Dart, Clean Architecture, REST APIs, Google Maps, and app store deployments. Proven ability to translate business requirements and Figma designs into scalable mobile solutions.',
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        color: theme.colorScheme.onSurfaceVariant,
-                        height: 1.8,
-                      ),
+                      'I have a strong background in Clean Architecture, REST APIs, and Google Maps integration. I have successfully led development for location-based applications and contributed to various enterprise solutions.',
+                      style: style,
                     ),
                     const SizedBox(height: 24),
                     Text(
-                      'Here are a few technologies I’ve been working with recently:',
-                      style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        color: theme.colorScheme.onSurfaceVariant,
-                        height: 1.8,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Wrap(
-                      spacing: 24,
-                      runSpacing: 12,
-                      children: [
-                        _buildTechItem('Flutter', theme),
-                        _buildTechItem('Dart', theme),
-                        _buildTechItem('Firebase', theme),
-                      ],
+                      'I am always eager to learn new technologies and improve my skills, currently exploring Python & FastAPI along with active LeetCode DSA practice.',
+                      style: style,
                     ),
                   ],
                 ),
@@ -101,24 +73,6 @@ class AboutSection extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-
-  Widget _buildTechItem(String label, ThemeData theme) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        const Icon(Icons.arrow_right, color: Color(0xFF5C5C8C), size: 20),
-        const SizedBox(width: 4),
-        Text(
-          label,
-          style: GoogleFonts.poppins(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-            color: theme.colorScheme.onSurfaceVariant,
-          ),
-        ),
-      ],
     );
   }
 }
