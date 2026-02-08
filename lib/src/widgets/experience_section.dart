@@ -14,14 +14,14 @@ class ExperienceSection extends StatelessWidget {
         'company': 'Repalogic India West Pvt Ltd, Surat',
         'period': 'JUN 2024 - PRESENT',
         'description':
-            'Lead developer for Get Your Offer, a location-based digital storefront application. Implemented Google Maps API with custom markers, overlays, and real-time tracking. Designed responsive UI from Figma designs using Material & Cupertino widgets. Integrated multiple REST APIs and optimized app performance across Android & iOS. Managed manual CI/CD, app signing, and store release compliance. Contributed to TYRIOS products (Inventory, eCash, WorkHub).',
+            'Developed the Get Your Offer app, a location-based storefront platform featuring custom Google Maps integrations and a responsive UI translated directly from Figma designs. Managed the full production lifecycle, including REST API optimization and the end-to-end release process—encompassing code signing, CI/CD pipelines, and store compliance for both iOS and Android. Further extended technical contributions to the TYRIOS suite by engineering core features for the Inventory, eCash, and WorkHub applications.',
       },
       {
         'role': 'Flutter developer',
         'company': 'DeepByte Technology, Bengaluru',
         'period': 'JAN 2023 - APR 2024',
         'description':
-            'Developed Liebherr EMT Sales & My Guide apps for catalog access and CRM integration. Built TYRIOS eCash, a secure local voucher terminal system. Implemented TYRIOS Inventory with real-time stock tracking and backend sync. Collaborated with backend & QA teams to deliver stable production builds.',
+            'Developed the Liebherr EMT Sales and My Guide apps for catalog access and engineered TYRIOS eCash, a secure local voucher terminal system. Implemented TYRIOS Inventory featuring real-time stock tracking and backend synchronization. Collaborated with cross-functional teams to ensure stable, high-performance production builds across the product ecosystem.',
       },
       {
         'role': 'Flutter developer (Intern)',
