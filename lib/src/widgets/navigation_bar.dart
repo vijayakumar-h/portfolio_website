@@ -94,7 +94,9 @@ class PortfolioNavigationBar extends StatelessWidget {
                   if (!isMobile) ...[
                     const SizedBox(width: 24),
                     ElevatedButton(
-                      onPressed: () {}, // TODO: Download CV logic
+                      onPressed: () {
+                        launchUrl(Uri.parse('assets/assets/resume.pdf'));
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.yellow,
                         // As per image reference
