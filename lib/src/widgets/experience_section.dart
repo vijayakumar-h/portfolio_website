@@ -14,7 +14,7 @@ class ExperienceSection extends StatelessWidget {
         'company': 'Repalogic India West Pvt Ltd, Surat',
         'period': 'JUN 2024 - PRESENT',
         'description':
-            'Lead developer for Get Your Offer (OFFR), a location-based digital storefront application. Implemented Google Maps API with custom markers, overlays, and real-time tracking. Designed responsive UI from Figma designs using Material & Cupertino widgets. Integrated multiple REST APIs and optimized app performance across Android & iOS. Managed manual CI/CD, app signing, and store release compliance. Contributed to TYRIOS products (Inventory, eCash, WorkHub).',
+            'Lead developer for Get Your Offer, a location-based digital storefront application. Implemented Google Maps API with custom markers, overlays, and real-time tracking. Designed responsive UI from Figma designs using Material & Cupertino widgets. Integrated multiple REST APIs and optimized app performance across Android & iOS. Managed manual CI/CD, app signing, and store release compliance. Contributed to TYRIOS products (Inventory, eCash, WorkHub).',
       },
       {
         'role': 'Flutter developer',

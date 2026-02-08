@@ -165,7 +165,7 @@ class HeroSection extends StatelessWidget {
                 ],
                 image: const DecorationImage(
                   image: AssetImage('assets/images/person.png'),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fitHeight,
                 ),
                 border: Border.all(color: theme.colorScheme.surface, width: 8),
               ),
