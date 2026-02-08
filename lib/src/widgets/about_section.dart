@@ -7,11 +7,11 @@ class AboutSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
     final theme = Theme.of(context);
-    final TextStyle style = GoogleFonts.poppins(
-      fontSize: 18,
-      color: theme.colorScheme.onSurfaceVariant,
-      height: 1.8,
-    );
+    final List<String> aboutMeList = [
+      "I'm a passionate Flutter Developer with 3+ years of experience building and deploying high-performance cross-platform mobile applications. My expertise lies in translating business requirements and Figma designs into scalable mobile solutions.",
+      'I have a strong background in Clean Architecture, REST APIs, and Google Maps integration. I have successfully led development for location-based applications and contributed to various enterprise solutions.',
+      'I am always eager to learn new technologies and improve my skills, currently exploring Python & FastAPI along with active LeetCode DSA practice.',
+    ];
 
     return Container(
       padding: EdgeInsets.symmetric(
@@ -49,19 +49,15 @@ class AboutSection extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "I'm a passionate Flutter Developer with 3+ years of experience building and deploying high-performance cross-platform mobile applications. My expertise lies in translating business requirements and Figma designs into scalable mobile solutions.",
-                      style: style,
-                    ),
-                    const SizedBox(height: 24),
-                    Text(
-                      'I have a strong background in Clean Architecture, REST APIs, and Google Maps integration. I have successfully led development for location-based applications and contributed to various enterprise solutions.',
-                      style: style,
-                    ),
-                    const SizedBox(height: 24),
-                    Text(
-                      'I am always eager to learn new technologies and improve my skills, currently exploring Python & FastAPI along with active LeetCode DSA practice.',
-                      style: style,
+                    ...aboutMeList.map(
+                      (text) => Text(
+                        text,
+                        style: GoogleFonts.poppins(
+                          fontSize: 18,
+                          color: theme.colorScheme.onSurfaceVariant,
+                          height: 1.8,
+                        ),
+                      ),
                     ),
                   ],
                 ),
