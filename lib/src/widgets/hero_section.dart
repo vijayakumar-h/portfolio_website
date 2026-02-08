@@ -45,7 +45,7 @@ class HeroSection extends StatelessWidget {
                 Text(
                   'VIJAYAKUMAR H',
                   style: GoogleFonts.poppins(
-                    fontSize: isMobile ? 48 : 80,
+                    fontSize: isMobile ? 40 : 68,
                     fontWeight: FontWeight.bold,
                     color: theme.primaryColor,
                     height: 1.2,
@@ -73,8 +73,6 @@ class HeroSection extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 48),
-
-                // Actions
                 Wrap(
                   spacing: 16,
                   runSpacing: 16,
@@ -150,7 +148,6 @@ class HeroSection extends StatelessWidget {
           if (!isMobile) const SizedBox(width: 60),
           if (isMobile) const SizedBox(height: 60),
 
-          // Right Column: Image
           Expanded(
             flex: isMobile ? 0 : 2,
             child: Container(

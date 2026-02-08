@@ -42,11 +42,10 @@ class SkillsSection extends StatelessWidget {
         vertical: 80,
       ),
       width: double.infinity,
-      color: theme.scaffoldBackgroundColor, // Match background
+      color: theme.scaffoldBackgroundColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Section Title
           Text(
             'Skills',
             style: GoogleFonts.poppins(
@@ -64,8 +63,6 @@ class SkillsSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(2),
             ),
           ),
-
-          // Skills Grid
           LayoutBuilder(
             builder: (context, constraints) {
               return Wrap(
@@ -74,7 +71,7 @@ class SkillsSection extends StatelessWidget {
                 children: skillCategories.map((category) {
                   final width = isMobile
                       ? constraints.maxWidth
-                      : (constraints.maxWidth - 24) / 2; // 2 columns on desktop
+                      : (constraints.maxWidth - 24) / 2;
 
                   return Container(
                     width: width,

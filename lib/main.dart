@@ -12,20 +12,19 @@ class PortfolioApp extends StatefulWidget {
 }
 
 class _PortfolioAppState extends State<PortfolioApp> {
-  final ThemeProvider _themeProvider = ThemeProvider();
 
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: _themeProvider,
+      listenable: themeProvider,
       builder: (context, child) {
         return MaterialApp(
           title: 'Portfolio',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          themeMode: _themeProvider.themeMode,
-          home: HomeScreen(themeProvider: _themeProvider),
+          themeMode: themeProvider.themeMode,
+          home: HomeScreen(themeProvider: themeProvider),
         );
       },
     );

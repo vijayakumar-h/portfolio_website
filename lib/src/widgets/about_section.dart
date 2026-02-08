@@ -89,8 +89,6 @@ class AboutSection extends StatelessWidget {
                         _buildTechItem('Flutter', theme),
                         _buildTechItem('Dart', theme),
                         _buildTechItem('Firebase', theme),
-                        _buildTechItem('Node.js', theme),
-                        _buildTechItem('Figma', theme),
                       ],
                     ),
                   ],

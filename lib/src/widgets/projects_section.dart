@@ -21,31 +21,23 @@ class ProjectsSection extends StatelessWidget {
         'description':
             'A full-featured shopping application containing cart, payment gateway integration, and order tracking. Built with Flutter and Firebase.',
         'tags': ['Flutter', 'Firebase', 'Stripe'],
-        'image': 'https://via.placeholder.com/600x400',
-        'link': 'https://github.com/vijay/ecommerce',
+        'image': 'https://blocks.astratic.com/img/general-img-landscape.png',
+        'link': 'https://github.com/vijayakumar-h/e_commerce_app',
       },
       {
-        'title': 'Task Manager',
+        'title': 'Expensive Tracker app',
         'description':
             'Productivity tool for managing daily tasks with reminders and categorization. Features local storage and cloud sync.',
-        'tags': ['Flutter', 'SQLite', 'Rest API'],
-        'image': 'https://via.placeholder.com/600x400',
-        'link': 'https://github.com/vijay/taskmanager',
-      },
-      {
-        'title': 'Social Media Dashboard',
-        'description':
-            'Analytics dashboard for tracking social media performance. Visualizes data using charts and graphs.',
-        'tags': ['Flutter', 'Charts', 'Analytics'],
-        'image': 'https://via.placeholder.com/600x400',
-        'link': 'https://github.com/vijay/dashboard',
+        'tags': ['Flutter', 'Hive'],
+        'image': 'https://blocks.astratic.com/img/general-img-landscape.png',
+        'link': 'https://github.com/vijayakumar-h/expensive_tracker_app',
       },
     ];
 
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? 24 : 100,
         vertical: 80,
+        horizontal: isMobile ? 24 : 100,
       ),
       width: double.infinity,
       color: theme.colorScheme.surface,
@@ -54,7 +46,7 @@ class ProjectsSection extends StatelessWidget {
         children: [
           // Section Title
           Text(
-            'Featured Projects',
+            'Personal Projects',
             style: GoogleFonts.poppins(
               fontSize: isMobile ? 32 : 48,
               fontWeight: FontWeight.bold,
@@ -70,8 +62,6 @@ class ProjectsSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(2),
             ),
           ),
-
-          // Projects Grid
           LayoutBuilder(
             builder: (context, constraints) {
               return Wrap(
@@ -99,7 +89,6 @@ class ProjectsSection extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Project Image
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
@@ -110,8 +99,6 @@ class ProjectsSection extends StatelessWidget {
                             ),
                           ),
                         ),
-
-                        // Content
                         Padding(
                           padding: const EdgeInsets.all(24),
                           child: Column(

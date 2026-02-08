@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:portfolio_website/src/common_exports.dart';
 
 class PortfolioNavigationBar extends StatelessWidget {
@@ -42,7 +41,6 @@ class PortfolioNavigationBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Navigation Items (Left Aligned on Desktop) / Logo on Mobile
               if (!isMobile)
                 Row(
                   children: [
@@ -67,8 +65,6 @@ class PortfolioNavigationBar extends StatelessWidget {
                     color: colorScheme.primary,
                   ),
                 ),
-
-              // Right Actions: Theme Switcher + CV Button (Desktop) / Menu (Mobile)
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -100,8 +96,8 @@ class PortfolioNavigationBar extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {}, // TODO: Download CV logic
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            Colors.yellow, // As per image reference
+                        backgroundColor: Colors.yellow,
+                        // As per image reference
                         foregroundColor: Colors.black,
                         elevation: 0,
                         padding: const EdgeInsets.symmetric(
